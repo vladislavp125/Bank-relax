@@ -154,7 +154,7 @@ def money_to_cash(balance, password, login_to_cash):
 
 _Функция вернет balance_
 
-
+***
 ### Функция "*Проверить баланс*"
 ```python
 def check_balance(balance, password):
@@ -174,7 +174,7 @@ def check_balance(balance, password):
 
 Описание
 _Функция отобразит баланс в консоли._
-
+***
 ### Функция "*Транзакции*"
 ```python
 def transaction(transactions, login_tran):
@@ -200,7 +200,7 @@ def transaction(transactions, login_tran):
 Функция добавит в словарь данные ф вормате ключ-Назначение, значение-Сумма,
 сохранит в файл _login_transaction.txt_ транзакции в формате "Назначение пополнения", "Сумма пополнения"
 Функция выведет количество ожидаемых пополнений в консоль.
-
+***
 ### Функция "*Лимит*"
 ```python
 def max_limite(login_limit):
@@ -225,7 +225,7 @@ def max_limite(login_limit):
 она выполняться не будет.
 
 *Функция вернет limite*
-
+***
 ### Функция "*Выполнить запланированные транзакции*"
 ```python
 def ran_transactions(transactions, limite, login_tran):
@@ -258,7 +258,7 @@ def ran_transactions(transactions, limite, login_tran):
 Транзакции которые больше суммы лимита, запишутся в файл.
 
 *функция вернет сумму которую прибавит к балансу.*
-
+***
 ### Функция "*Статистика по ожидаемым операциям*"
 ```python
 def stat_expected_amount(transactions):
@@ -282,7 +282,7 @@ def stat_expected_amount(transactions):
 
 Описание:
 Функция посчитает сколько запланированно транзакций по сумме ожидаемого пополнения и выведет информацию на консоль
-
+***
 ### Функция "*Генератор для фильтрации транзакций*"
 ```python
 def filter_transaction_sub(transactions):
@@ -291,7 +291,7 @@ def filter_transaction_sub(transactions):
 ```
 Описание:
 функция вернет ключ, значение из словаря с транзакциями.
-
+***
 ### Функция "*Фильтр транзакций*"
 ```python
 def filter_transaction(transactions):
@@ -311,7 +311,7 @@ def filter_transaction(transactions):
 
 Описание:
 Функция выводит все транзакции больше определенной суммы в формате "Сумма", "Назначение"
-
+***
 ### Функция "*Ожидаемый платеж*"
 ```python
 def future_pay(user_password, balance_user):
@@ -363,7 +363,7 @@ def future_pay(user_password, balance_user):
 Если суммы недостаточно для отправки, отложенный платеж сохраняется в файл.
 
 *Функция вернет balance*
-
+***
 ### Функция "*Выполнить Ожидаемый платеж*"
 ```python
 def future_pay_act(user_balance, user_login):
@@ -400,7 +400,7 @@ def future_pay_act(user_balance, user_login):
 
 *Функция вернет balance*
 
-
+***
 ### Функция "*Восстановление данных*"
 ```python
 def recover_data_YES(user_login, transactions, user_data_func):
@@ -456,7 +456,7 @@ def recover_data_YES(user_login, transactions, user_data_func):
 функция выполняется если ранее был создан такой аккаунт и пароль верный.
 
 *Функция вернет словарь "данные пользователя"*
-
+***
 ### Функция "*Войти в аккаунт*"
 ```python
 def recover_login(transactions, user_data_func):
@@ -496,7 +496,7 @@ def recover_login(transactions, user_data_func):
 Если там есть эти данные, сверяется пароль и выполняется предыдущая функция "Востановление данных"
 
 _Функция вернет словарь данные пользователя._
-
+***
 ### Функция "*Регистрация*"
 ```python
 def recover_sign_in():
@@ -507,7 +507,7 @@ def recover_sign_in():
 Функция выполнит функцию создание пользователя.
 
 _Вернет логин, пароль, баланс_
-
+***
 ### Функция "*Выбор операции*"
 ```python
 def operation_user():
@@ -535,7 +535,7 @@ def operation_user():
 _функция вернет цифру от 1 до 10_
 
 
-
+***
 ### Тело основной программы
 ```python
 if __name__ == "__main__":
@@ -609,7 +609,7 @@ if __name__ == "__main__":
 Описание:
 Пользователю будет предложено Войти или Зарегестрироваться.
 После чего он сможет выбрать номер операции.
-
+***
 # Для использования программы
 1. **Запустите файл main.py**
 2. **Зарегистрируйте новый логин**
