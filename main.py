@@ -1,7 +1,3 @@
-transactions_data = {}
-user_data = {}
-
-
 def hash_pass(login_save, password_hash):
     h = 0
     hh = 1
@@ -37,16 +33,16 @@ def create_user():
     year = 2024
     balance = 0
     name = input('Введите ФИО: ')
-    try:
-        age = int(input('Внимание: Год рождения должен состоять только из цифр!' + '\nВведите год рождения: '))
-        login = str(input('Придумайте LOGIN: '))
-        password = str(input('Придумайте пароль: '))
-        print(f'Создан аккаунт: {name}  ({str(year - age)} лет)')
-    except ValueError:
-        age = int(input('Год рождения должен состоять из цифр, введите число:'))
-        login = str(input('Придумайте LOGIN: '))
-        password = str(input('Придумайте пароль: '))
-        print(f'Создан аккаунт: {name}  ({str(year - age)} лет)')
+    while True:
+        try:
+            age = int(input('Внимание: Год рождения должен состоять только из цифр!' + '\nВведите год рождения: '))
+            if (age + 1) == (age + 1):
+                break
+        except ValueError:
+            print('Возвраст должен состоять из цифр!')
+    login = str(input('Придумайте LOGIN: '))
+    password = str(input('Придумайте пароль: '))
+    print(f'Создан аккаунт: {name}  ({str(year - age)} лет)')
     print('Аккаунт успешно зарегистрирован!')
     login, password = hash_pass(login, password)
     with open(f'{login}_data_user.txt', 'w', encoding='UTF-8') as file:
@@ -348,6 +344,8 @@ def operation_user():
 
 
 if __name__ == "__main__":
+    transactions_data = {}
+    user_data = {}
     try:
         Bank_login = input('Добро пожаловать, вы хотите зарегистрироваться или войти в аккаунт?(Войти/Рег): ')
         if Bank_login == 'Войти':
